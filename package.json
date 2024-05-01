@@ -1,0 +1,20 @@
+{
+  "name": "24001118-snyrgy7-wahyupambudi-bcr-ch4",
+  "version": "1.0.0",
+  "description": "Project Challenge 4 Synrgy Binar Full Stack Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wahyupambudi/24001118-snyrgy7-wahyupambudi-bcr-ch4.git"
+  },
+  "author": "wahyu pambudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wahyupambudi/24001118-snyrgy7-wahyupambudi-bcr-ch4/issues"
+  },
+  "homepage": "https://github.com/wahyupambudi/24001118-snyrgy7-wahyupambudi-bcr-ch4#readme"
+}

@@ -1,0 +1,299 @@
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+/*font-size*/
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.fs-36 {
+  font-size: 36px;
+}
+
+/*width*/
+.w-468 {
+  max-width: 468px;
+}
+
+.w-268 {
+  max-width: 268px;
+}
+
+.w-79 {
+  max-width: 80px;
+  padding: 0px;
+}
+
+.w-1027 {
+  max-width: 1027px;
+}
+
+.w-1168 {
+  max-width: 1168px;
+}
+
+.w-1141 {
+  max-width: 1141px;
+}
+
+/*margin*/
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+.me-6 {
+  margin-right: 5rem !important;
+}
+
+.me-6-rem {
+  margin-right: 6rem !important;
+}
+
+/*padding*/
+.p-0 {
+  padding: 0px;
+}
+
+/*border-radius*/
+.br-13 {
+  border-radius: 13px;
+}
+
+.br-8 {
+  border-radius: 8px;
+}
+
+.br-100 {
+  border-radius: 100%;
+}
+
+/*header*/
+.bg-header {
+  background-color: #F1F3FF;
+}
+.btn-header {
+  background-color: #5CB85F;
+}
+
+.pd-banner {
+  padding: 8px 12px 8px 12px;
+}
+
+.img-car {
+  margin-left: -76px;
+  position: relative;
+  width: 575px;
+  height: auto;
+  left: 128px;
+}
+
+
+/*why us*/
+.fi {
+  color: white;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.thumbs {
+  background-color: #F9CC00;
+}
+
+.tag {
+  background-color: #FA2C5A;
+}
+
+.clock {
+  background-color: #0D28A6;
+}
+
+.award {
+  text-align: center;
+  width: 36px;
+  background-color: #5CB85F;
+}
+
+/*accordion*/ 
+.border-accor {
+  border: 1px solid #D4D4D4 !important;
+  border-radius: 4px !important;
+}
+
+.footer-a {
+  text-decoration: none;
+}
+
+/*testimoni*/
+
+.chevron-right {
+  background-color: #5CB85F;
+  height: 32px;
+  width: 32px;
+  color: white;
+}
+
+.chevron-left {
+  height: 32px;
+  width: 32px;
+  border: 1px solid #C4C4C4;
+}
+
+.testi-card {
+  background-color: #F1F3FF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.owl-dots {
+  display: none;
+}
+
+/*.star {
+  color: #f9cc00;
+}*/
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.testi-comment {
+  max-width: 415px; 
+  padding:0px;
+}
+
+.testi {
+  margin: 10px;
+  padding: 0;
+  width: 619px;
+  height: 270px;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 576px){
+  .img-car {
+    margin-left:0px;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    left: 22px;
+    right: 0;
+  }
+}
+
+/*responsive testing*/
+@media screen and (max-width: 360px){
+/* header */
+  .w-468{
+    width: 328px;
+  }
+  .w-468-1{
+    max-width: 212px !important;
+  }
+  .mt-24 {
+    margin-top: 24px;
+  }
+  .img-car {
+    margin-left:0px;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    left: 22px;
+    right: 0;
+  }
+
+/* navbar */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    padding: 0;
+    background: transparent;
+  }
+    
+  /* Menetapkan posisi navbar-collapse agar muncul dari kanan ke kiri */
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    background-color: #FFFFFF; /* Warna background menu */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk menu */
+    padding: 15px;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    width: 180px;
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-hide {
+    border: none;
+    background-color: transparent;
+  }
+
+  .mt-5 {
+    margin-top: 0px !important;
+  }
+
+/* hero section */
+  .me-6-rem {
+    margin-right: 0px !important;
+  }
+  .w-252 {
+    max-width: 252px;
+  }
+
+/* why us */
+  .txt-center {
+    text-align: center;
+  }
+/* testi */
+
+  .testi-comment {
+    max-width: 264px; 
+    padding:0px;
+  }
+
+  .testi {
+    margin: 10px;
+    width: 328px;
+    height: 372px;
+  }
+
+  .col-3 {
+    width: auto;
+  }
+
+  .justify-content-start {
+    justify-content: center !important;
+  }
+
+  .ml-10 {
+    margin-left: 10px;
+  }
+
+  .rate-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
