@@ -14,6 +14,7 @@ body {
 
 .fs-16 {
   font-size: 16px;
+  font-weight: bold;
 }
 
 .fs-24 {
@@ -22,6 +23,10 @@ body {
 
 .fs-36 {
   font-size: 36px;
+}
+
+.fw-light {
+  font-weight: light;
 }
 
 /*width*/
@@ -127,6 +132,10 @@ body {
   height: 36px;
 }
 
+.ml-05 {
+  margin-left: 5px;
+}
+
 .form-select {
   width: 200px !important;
 }
@@ -137,6 +146,11 @@ body {
 
 .placeholder {
   color: #8A8A8A;
+}
+
+.icon-20 {
+  height: 20px;
+  width: 20px;
 }
 
 input[type="date"] {
@@ -170,6 +184,8 @@ input[type="time"] {
   .mt-45 {
     margin: 10px;
   }
+
+  
 
   input[type="date"] {
     width: 100%;

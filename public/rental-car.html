@@ -23,7 +23,9 @@
           <a class="navbar-brand" href="#">
             <img src="./images/main/logo.png" alt="logo">
           </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -55,7 +57,8 @@
         <div class="row">
           <div class="col mt-5">
             <h1 class="fs-36"><strong>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</strong></h1>
-            <p class="mt-3 fs-14 w-468">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+            <p class="mt-3 fs-14 w-468">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik
+              dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
           </div>
           <div class="col">
             <img src="./images/main/img_car.png" class="img mt-24 img-car" alt="img_car">
@@ -69,11 +72,11 @@
     <div class="container w-1047 shadow p-3 rounded fs-12 bg-body">
       <div class="row justify-content-around">
         <div class="col-md-2">
-          <label for="tipeDriver" class="form-label">Tipe Driver</label>
-          <select class="form-select fs-12 h-36 placeholder" aria-label="Default select example" id="tipeDriver">
+          <label for="driverType" class="form-label">Tipe Driver</label>
+          <select class="form-select fs-12 h-36 placeholder" aria-label="Default select example" id="driverType">
             <option selected>Pilih Tipe Driver</option>
-            <option value="sopir">Dengan Sopir</option>
-            <option value="kunci">Tanpa Sopir (Lepas Kunci)</option>
+            <option value="Dengan Supir">Dengan Sopir</option>
+            <option value="Tanpa Supir">Tanpa Sopir (Lepas Kunci)</option>
           </select>
         </div>
         <div class="col-md-2">
@@ -82,15 +85,17 @@
         </div>
         <div class="col-md-2">
           <label for="pickupTime" class="form-label">Waktu Jemput / Ambil</label>
-          <input type="time" class="form-control fs-12 h-36 placeholder" id="pickupTime" aria-describedby="pickupTime" placeholder="Pilih Waktu">
+          <input type="time" class="form-control fs-12 h-36 placeholder" id="pickupTime" aria-describedby="pickupTime"
+            placeholder="Pilih Waktu">
         </div>
         <div class="col-md-2">
           <label for="passenger" class="form-label w-200">Jumlah Penumpang (optional)</label>
-          <input type="number" class="form-control fs-12 h-36 placeholder" id="passenger" aria-describedby="passenger" placeholder="Jumlah Penumpang">
+          <input type="number" class="form-control fs-12 h-36 placeholder" id="passenger" aria-describedby="passenger"
+            placeholder="Jumlah Penumpang">
         </div>
         <div class="col-md-2">
           <label for="" class="form-label w-200" style="visibility: hidden;">cari</label>
-          <a href="#" class="btn text-white fs-14 btn-header" id="filter-btn"><strong>Cari Mobil</strong></a>
+          <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
         </div>
       </div>
     </div>
@@ -98,8 +103,72 @@
 
   <!-- RESULT FILTER -->
   <section>
-    <div class="container" id="cars-container">
+    <div class="container w-1047" id="cars-container">
       <h1>Result</h1>
+      <div class="row">
+        <div class="col">
+          <div class="card shadow p-3 rounded">
+            <p class="card-text fs-14">Nama/Tipe Mobil</p>
+            <p class="card-title fs-16">Rp. 430.000 / hari</p>
+            <p class="card-text fs-14 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facere
+              tempore optio, sint explicabo consectetur quod non dignissimos dolores doloremque iste voluptatem rerum
+              ipsum molestiae amet autem? Eos, corporis eveniet.</p>
+            <ul class="list-unstyled">
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">data</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">data</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">data</li>
+            </ul>
+            <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow p-3 rounded">
+            <p class="card-text fs-14">Nama/Tipe Mobil</p>
+            <p class="card-title fs-16">Rp. 430.000 / hari</p>
+            <p class="card-text fs-14 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facere
+              tempore optio, sint explicabo consectetur quod non dignissimos dolores doloremque iste voluptatem rerum
+              ipsum molestiae amet autem? Eos, corporis eveniet.</p>
+            <!-- <li class="mt-2 fa fa-users"></li> -->
+            <!-- <li class="mt-2 fa fa-cog"></li> -->
+            <!-- <li class="mt-2 fa fa-calendar"></li> -->
+            <ul class="list-unstyled">
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">data</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">data</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">data</li>
+            </ul>
+            <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow p-3 rounded">
+            <p class="card-text fs-14">Nama/Tipe Mobil</p>
+            <p class="card-title fs-16">Rp. 430.000 / hari</p>
+            <p class="card-text fs-14 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facere
+              tempore optio, sint explicabo consectetur quod non dignissimos dolores doloremque iste voluptatem rerum
+              ipsum molestiae amet autem? Eos, corporis eveniet.</p>
+            <!-- <li class="mt-2 fa fa-users"></li> -->
+            <!-- <li class="mt-2 fa fa-cog"></li> -->
+            <!-- <li class="mt-2 fa fa-calendar"></li> -->
+            <ul class="list-unstyled">
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">data</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">data</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">data</li>
+            </ul>
+            <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-5" style="width: 333px;">
+        <div class="card-body">
+          <img src="${this.image}" alt="${this.manufacture}" class="img-js">
+          <p class="card-text mt-3">${this.model}</p>
+          <p><b>Rp 430.000 / hari</b></p>
+          <p>${this.description}</p>
+          <p>Tipe Driver: <b>${this.typeDriver}</b></p>
+          <p>Kapasitas: <b>${this.capacity} Orang</b></p>
+          <a href="#" class="btn btn-success btn-js">Pilih Mobil</a>
+        </div>
+      </div>
     </div>
   </section>
   <!-- FOOTER -->
@@ -154,32 +223,32 @@
   <script type="text/javascript" src="./scripts/car.example.js"></script>
   <script type="text/javascript" src="./scripts/main.example.js"></script>
   <script>
-  $('.owl-carousel').owlCarousel({
-    stagePadding: 10,
-    // autoplay: true,
-    // autoplayTimeout: 3000,
-    // autoplayHoverPause: true,
-    loop: true,
-    margin: 35,
-    nav: true,
-    center: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 1
-      },
-      1000: {
-        items: 2
+    $('.owl-carousel').owlCarousel({
+      stagePadding: 10,
+      // autoplay: true,
+      // autoplayTimeout: 3000,
+      // autoplayHoverPause: true,
+      loop: true,
+      margin: 35,
+      nav: true,
+      center: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 2
+        }
       }
-    }
-  })
+    })
 
-  function hideSidebar(value) {
-    const hideSidebar = document.getElementById("navbarSupportedContent");
-    hideSidebar.classList.toggle("show")
-  }
+    function hideSidebar(value) {
+      const hideSidebar = document.getElementById("navbarSupportedContent");
+      hideSidebar.classList.toggle("show")
+    }
   </script>
 </body>
 

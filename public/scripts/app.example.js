@@ -13,8 +13,16 @@ class App {
     this.filterBtn.onclick = this.filter;
   }
 
-  filter = () => {
-    console.log("This Filter")
+  async filter() {
+    // console.log("This Filter");
+    const driverType = document.getElementById("driverType").value;
+    console.log(driverType)
+    const date = document.getElementById("date").value;
+    console.log(date)
+    const pickupTime = document.getElementById("pickupTime").value;
+    console.log(pickupTime);
+    const passenger = document.getElementById("passenger").value;
+    console.log(passenger);
   }
 
   run = () => {
