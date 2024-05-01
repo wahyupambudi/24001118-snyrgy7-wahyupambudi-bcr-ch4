@@ -5,19 +5,18 @@ const path = require("path");
 // membuat fungsi server
 const server = http.createServer((req, res) => {
   //   mendapatkan filepath dari url
-  let filePath = "." + req.url;
-  //   console.log(filePath);
+  let filePath = "./public" + req.url;
+
   //   routing
-  if (filePath === "./") {
+  if (filePath === "./public/") {
     filePath = "./public/index.html"; // Redirect to index.html
-  } else if (filePath === "./rental") {
+  } else if (filePath === "./public/rental") {
     filePath = "./public/rental-car.html";
   }
 
   //   mendapatkan extensi dari file yang didapatkan pada filepath url
   //   untuk kebutuhan mime
   const extname = path.extname(filePath);
-  console.log(extname);
   let contentType = "text/html";
   if (extname === ".css") {
     contentType = "text/css";
