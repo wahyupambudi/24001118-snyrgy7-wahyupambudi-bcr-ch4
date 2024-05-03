@@ -14,7 +14,6 @@ class Binar {
         timeAt.getTime() + (isPositive ? mutator : -1 * mutator)
       );
       const typeDriver = isPositive ? 'Tanpa Supir' : 'Dengan Supir'
-      // console.log(typeDriver)
       return {
         ...car,
         availableAt,

@@ -74,18 +74,18 @@
         <div class="col-md-2">
           <label for="driverType" class="form-label">Tipe Driver</label>
           <select class="form-select fs-12 h-36 placeholder" aria-label="Default select example" id="driverType">
-            <option selected>Pilih Tipe Driver</option>
+            <option value="0" selected>Pilih Tipe Driver</option>
             <option value="Dengan Supir">Dengan Sopir</option>
             <option value="Tanpa Supir">Tanpa Sopir (Lepas Kunci)</option>
           </select>
         </div>
         <div class="col-md-2">
           <label for="date" class="form-label">Tanggal</label>
-          <input type="date" class="form-control fs-12 h-36 placeholder" id="date" aria-describedby="date">
+          <input type="text" onfocus="(this.type='date')" placeholder="Pilih Tanggal" class="form-control fs-12 h-36 placeholder" id="date" aria-describedby="date">
         </div>
         <div class="col-md-2">
           <label for="pickupTime" class="form-label">Waktu Jemput / Ambil</label>
-          <input type="time" class="form-control fs-12 h-36 placeholder" id="pickupTime" aria-describedby="pickupTime"
+          <input type="text" onfocus="(this.type='time')" placeholder="Pilih Waktu" class="form-control fs-12 h-36 placeholder" id="pickupTime" aria-describedby="pickupTime"
             placeholder="Pilih Waktu">
         </div>
         <div class="col-md-2">
@@ -103,71 +103,10 @@
 
   <!-- RESULT FILTER -->
   <section>
-    <div class="container w-1047" id="cars-container">
-      <h1>Result</h1>
-      <div class="row">
-        <div class="col">
-          <div class="card shadow p-3 rounded">
-            <p class="card-text fs-14">Nama/Tipe Mobil</p>
-            <p class="card-title fs-16">Rp. 430.000 / hari</p>
-            <p class="card-text fs-14 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facere
-              tempore optio, sint explicabo consectetur quod non dignissimos dolores doloremque iste voluptatem rerum
-              ipsum molestiae amet autem? Eos, corporis eveniet.</p>
-            <ul class="list-unstyled">
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">data</li>
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">data</li>
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">data</li>
-            </ul>
-            <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow p-3 rounded">
-            <p class="card-text fs-14">Nama/Tipe Mobil</p>
-            <p class="card-title fs-16">Rp. 430.000 / hari</p>
-            <p class="card-text fs-14 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facere
-              tempore optio, sint explicabo consectetur quod non dignissimos dolores doloremque iste voluptatem rerum
-              ipsum molestiae amet autem? Eos, corporis eveniet.</p>
-            <!-- <li class="mt-2 fa fa-users"></li> -->
-            <!-- <li class="mt-2 fa fa-cog"></li> -->
-            <!-- <li class="mt-2 fa fa-calendar"></li> -->
-            <ul class="list-unstyled">
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">data</li>
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">data</li>
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">data</li>
-            </ul>
-            <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow p-3 rounded">
-            <p class="card-text fs-14">Nama/Tipe Mobil</p>
-            <p class="card-title fs-16">Rp. 430.000 / hari</p>
-            <p class="card-text fs-14 fw-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut facere
-              tempore optio, sint explicabo consectetur quod non dignissimos dolores doloremque iste voluptatem rerum
-              ipsum molestiae amet autem? Eos, corporis eveniet.</p>
-            <!-- <li class="mt-2 fa fa-users"></li> -->
-            <!-- <li class="mt-2 fa fa-cog"></li> -->
-            <!-- <li class="mt-2 fa fa-calendar"></li> -->
-            <ul class="list-unstyled">
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">data</li>
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">data</li>
-              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">data</li>
-            </ul>
-            <button class="btn text-white fs-14 btn-header" id="filter-btn">Cari Mobil</button>
-          </div>
-        </div>
-      </div>
-      <div class="card mt-5" style="width: 333px;">
-        <div class="card-body">
-          <img src="${this.image}" alt="${this.manufacture}" class="img-js">
-          <p class="card-text mt-3">${this.model}</p>
-          <p><b>Rp 430.000 / hari</b></p>
-          <p>${this.description}</p>
-          <p>Tipe Driver: <b>${this.typeDriver}</b></p>
-          <p>Kapasitas: <b>${this.capacity} Orang</b></p>
-          <a href="#" class="btn btn-success btn-js">Pilih Mobil</a>
-        </div>
+    <div class="container w-1047 p-0">
+      <br>
+      <div class="row" id="cars-container">
+       
       </div>
     </div>
   </section>

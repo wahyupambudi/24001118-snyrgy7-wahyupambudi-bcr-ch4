@@ -29,7 +29,7 @@ class Car {
     this.image = image;
     this.rentPerDay = rentPerDay;
     this.capacity = capacity;
-    this.description = description;
+    this.description = description.substring(0, 60);
     this.transmission = transmission;
     this.available = available;
     this.type = type;
@@ -41,12 +41,19 @@ class Car {
 
   render() {
     return `
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
+          <div class="card shadow p-3 rounded">
+            <img class="img-car-filter" src="${this.image}" alt="">
+            <p class="card-text fs-14">${this.type} / ${this.manufacture}</p>
+            <p class="card-title fs-16">Rp ${new Intl.NumberFormat("id").format(this.rentPerDay)} / hari</p>
+            <p class="card-text fs-14 fw-light">${this.description}</p>
+            <ul class="list-unstyled">
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_users.png" alt="logo">${this.capacity} orang</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_settings.png" alt="logo">${this.transmission}</li>
+              <li class="mb-3"><img class="icon-20 me-2" src="./images/main/icon/fi_calendar.png" alt="logo">${this.year} </li>
+            </ul>
+            <button class="btn text-white fs-14 btn-header" id="filter-btn">Pilih Mobil</button>
+          </div>
+        </br>
     `;
   }
 }

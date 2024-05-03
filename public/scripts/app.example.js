@@ -16,18 +16,28 @@ class App {
   async filter() {
     // console.log("This Filter");
     const driverType = document.getElementById("driverType").value;
-    console.log(driverType)
+    console.log(driverType);
     const date = document.getElementById("date").value;
-    console.log(date)
+    console.log(date);
     const pickupTime = document.getElementById("pickupTime").value;
     console.log(pickupTime);
     const passenger = document.getElementById("passenger").value;
     console.log(passenger);
+
+    Car.init(cars);
+    document.getElementById("cars-container").innerHTML = '';
+    Car.list.forEach((car) => {
+      const node = document.createElement("div");
+      node.classList.add("col-md-4");
+      node.innerHTML = car.render();
+      document.getElementById("cars-container").appendChild(node);
+    });
   }
 
   run = () => {
     Car.list.forEach((car) => {
       const node = document.createElement("div");
+      node.classList.add("col-md-4");
       node.innerHTML = car.render();
       this.carContainerElement.appendChild(node);
     });

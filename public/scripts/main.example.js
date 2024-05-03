@@ -8,7 +8,6 @@ const params = Object.fromEntries(urlSearchParams.entries());
 
 // Coba olah data ini hehe :)
 console.log(params);
-
 /*
  * Contoh penggunaan DOM di dalam class
  * */
