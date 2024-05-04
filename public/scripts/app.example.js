@@ -8,8 +8,7 @@ class App {
 
   async init() {
     await this.load();
-
-    // Register click listener
+    // add click listener
     this.filterBtn.onclick = this.filter;
   }
 
@@ -23,6 +22,8 @@ class App {
     console.log(pickupTime);
     const passenger = document.getElementById("passenger").value;
     console.log(passenger);
+
+    
 
     Car.init(cars);
     document.getElementById("cars-container").innerHTML = '';
