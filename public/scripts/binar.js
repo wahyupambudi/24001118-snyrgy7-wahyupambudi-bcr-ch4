@@ -13,11 +13,11 @@ class Binar {
       const availableAt = new Date(
         timeAt.getTime() + (isPositive ? mutator : -1 * mutator)
       );
-      const typeDriver = isPositive ? 'Tanpa Supir' : 'Dengan Supir'
+      // const typeDriver = isPositive ? 'Tanpa Supir' : 'Dengan Supir'
       return {
         ...car,
         availableAt,
-        typeDriver
+        // typeDriver
       };
     });
   };

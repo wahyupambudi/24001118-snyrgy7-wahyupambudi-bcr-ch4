@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   //   routing
   if (filePath === "./public/") {
     filePath = "./public/index.html"; // Redirect to index.html
-  } else if (filePath === "./public/rental") {
+  } else if (filePath === "./public/cars") {
     filePath = "./public/rental-car.html";
   }
 
