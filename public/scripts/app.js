@@ -10,6 +10,10 @@ class App {
     await this.load();
     // add click listener
     this.filterBtn.onclick = this.filterCar;
+
+    driverType.addEventListener("change", this.checkInput);
+    date.addEventListener("change", this.checkInput);
+    pickupTime.addEventListener("change", this.checkInput);
   }
 
   async filterCar() {
@@ -43,12 +47,22 @@ class App {
       const minutesAvailable = Number(`${newDateAvailable.getMinutes()}`);
       const newTimeAvailable = hoursAvailable * 60 + minutesAvailable;
 
-      return (
-        car.typeDriver === driverType &&
-        newDate.getDate() === newDateAvailable.getDate() &&
-        newPickupTime <= newTimeAvailable &&
-        car.capacity === seat
-      );
+      // optional seat
+      if (seat == 0) {
+        return (
+          (car.typeDriver === driverType &&
+            newDate.getDate() === newDateAvailable.getDate() &&
+            newPickupTime <= newTimeAvailable) ||
+          car.capacity === seat
+        );
+      } else if (seat > 0) {
+        return (
+          car.typeDriver === driverType &&
+          newDate.getDate() === newDateAvailable.getDate() &&
+          newPickupTime <= newTimeAvailable &&
+          car.capacity === seat
+        );
+      }
     });
 
     Car.init(cars);
@@ -91,6 +105,18 @@ class App {
     // console.log(newCarList);
     Car.init(newCarList);
   }
+
+  checkInput = () => {
+    const getDriverType = driverType.value.trim();
+    const getDate = date.value.trim();
+    const getPickupTime = pickupTime.value.trim();
+
+    if (getDriverType !== "" && getPickupTime !== "" && getDate !== "") {
+      this.filterBtn.removeAttribute("disabled");
+    } else {
+      this.filterBtn.setAttribute("disabled");
+    }
+  };
 
   clear = () => {
     let child = this.carContainerElement.firstElementChild;
