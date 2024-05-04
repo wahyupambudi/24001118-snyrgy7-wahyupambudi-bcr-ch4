@@ -41,7 +41,7 @@ class App {
       const hours = Number(hoursString);
       const minutes = Number(minutesString);
       const newPickupTime = hours * 60 + minutes;
-      console.log(newPickupTime)
+
       // get time from availableAt
       const hoursAvailable = Number(`${newDateAvailable.getHours()}`);
       const minutesAvailable = Number(`${newDateAvailable.getMinutes()}`);
@@ -111,7 +111,7 @@ class App {
     const getDate = date.value.trim();
     const getPickupTime = pickupTime.value.trim();
 
-    if (getDriverType !== "" && getPickupTime !== "" && getDate !== "") {
+    if (getDriverType !== "" && getPickupTime !== "0" && getDate !== "") {
       this.filterBtn.removeAttribute("disabled");
     } else {
       this.filterBtn.setAttribute("disabled");
