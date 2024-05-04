@@ -14,13 +14,9 @@ class App {
 
   async filterCar() {
     const driverType = document.getElementById("driverType").value;
-    console.log(driverType);
     const date = document.getElementById("date").value;
-    console.log(new Date(date));
     const pickupTime = document.getElementById("pickupTime").value;
-    console.log(pickupTime);
     const seat = Number(document.getElementById("seat").value);
-    console.log(seat);
 
     const carList = JSON.parse(localStorage.getItem("CARS"));
     const newCarList = carList.map((car) => {
@@ -29,31 +25,24 @@ class App {
       };
     });
 
-    console.log(newCarList);
-
     const cars = newCarList.filter((car) => {
       // to get new date from input
       const newDate = new Date(date);
 
       // get date from availableAt
       const newDateAvailable = new Date(car.availableAt);
-      console.log(newDateAvailable);
+
       // get time from input
       const [hoursString, minutesString] = pickupTime.split(":");
       const hours = Number(hoursString);
       const minutes = Number(minutesString);
-      // const newPickupTime = Number(`${hours}${minute}`);
       const newPickupTime = hours * 60 + minutes;
-      console.log(newPickupTime);
+
       // get time from availableAt
       const hoursAvailable = Number(`${newDateAvailable.getHours()}`);
       const minutesAvailable = Number(`${newDateAvailable.getMinutes()}`);
       const newTimeAvailable = hoursAvailable * 60 + minutesAvailable;
-      console.log(car.manufacture + car.rentPerDay + car.typeDriver + car.capacity + " " + " " + newDateAvailable + " " + hoursAvailable);
-      console.log(minutesAvailable);
-      console.log(newTimeAvailable);
-      console.log(newPickupTime < newTimeAvailable);
-      console.log(typeof seat)
+
       return (
         car.typeDriver === driverType &&
         newDate.getDate() === newDateAvailable.getDate() &&
