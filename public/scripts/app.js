@@ -41,7 +41,7 @@ class App {
       const hours = Number(hoursString);
       const minutes = Number(minutesString);
       const newPickupTime = hours * 60 + minutes;
-
+      console.log(newPickupTime)
       // get time from availableAt
       const hoursAvailable = Number(`${newDateAvailable.getHours()}`);
       const minutesAvailable = Number(`${newDateAvailable.getMinutes()}`);

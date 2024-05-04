@@ -81,12 +81,22 @@
         </div>
         <div class="col-md-2">
           <label for="date" class="form-label">Tanggal</label>
-          <input type="text" onfocus="(this.type='date')" placeholder="Pilih Tanggal" class="form-control fs-12 h-36 placeholder" id="date" aria-describedby="date">
+          <input type="text" onfocus="(this.type='date')" placeholder="Pilih Tanggal"
+            class="form-control fs-12 h-36 placeholder" id="date" aria-describedby="date">
         </div>
         <div class="col-md-2">
           <label for="pickupTime" class="form-label">Waktu Jemput / Ambil</label>
-          <input type="text" onfocus="(this.type='time')" placeholder="Pilih Waktu" class="form-control fs-12 h-36 placeholder" id="pickupTime" aria-describedby="pickupTime"
-            placeholder="Pilih Waktu">
+          <!-- <input type="text" onfocus="(this.type='time')" placeholder="Pilih Waktu"
+            class="form-control fs-12 h-36 placeholder" id="pickupTime" aria-describedby="pickupTime"
+            placeholder="Pilih Waktu"> -->
+          <select class="form-select fs-12 h-36 placeholder" aria-label="Default select example" id="pickupTime">
+            <option value="0" selected>Pilih Waktu</option>
+            <option value="08:00">08:00 WIB</option>
+            <option value="09:00">09:00 WIB</option>
+            <option value="10:00">10:00 WIB</option>
+            <option value="11:00">11:00 WIB</option>
+            <option value="12:00">12:00 WIB</option>
+          </select>
         </div>
         <div class="col-md-2">
           <label for="seat" class="form-label w-200">Jumlah Penumpang (optional)</label>
@@ -106,7 +116,7 @@
     <div class="container w-1047 p-0">
       <br>
       <div class="row" id="cars-container">
-       
+
       </div>
     </div>
   </section>
